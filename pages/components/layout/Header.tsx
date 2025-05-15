@@ -39,9 +39,7 @@ const Header = () => {
                 </Button>
               </Link>
             ))}
-            <Button variant="outlined" size="small" sx={{ borderColor: "white", backgroundColor: "ButtonFace" }}>
-              Sign In
-            </Button>
+            <Button color="secondary">Sign Up | Log In</Button>
           </nav>
 
           {/* Mobile Menu Icon */}
