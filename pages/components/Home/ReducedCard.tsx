@@ -31,6 +31,10 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
     <Card
       elevation={4}
       sx={{
+        width: '100%', // full width of the Grid item column
+        height: '100%', // make all cards the same height
+        display: 'flex',
+        flexDirection: 'column',
         borderRadius: 2,
         transition: 'box-shadow 0.3s ease',
         cursor: 'pointer',
@@ -40,15 +44,27 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
         },
       }}
     >
-      <Box sx={{ overflow: 'hidden', borderTopLeftRadius: 8, borderTopRightRadius: 8 }}>
+      {/* Image Wrapper with fixed aspect ratio */}
+      <Box
+        sx={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '4 / 3',
+          overflow: 'hidden',
+          borderTopLeftRadius: 8,
+          borderTopRightRadius: 8,
+        }}
+      >
         <CardMedia
           component="img"
-          height="200"
           image={image}
           alt={name}
           sx={{
-            width: '300px',
-            height: '100',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
             transition: 'transform 0.5s ease',
             '&:hover': {
@@ -58,7 +74,8 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
         />
       </Box>
 
-      <CardContent>
+      {/* Rest of the card content stays as is */}
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="h6" fontWeight="medium" gutterBottom noWrap>
           {name}
         </Typography>
@@ -79,12 +96,7 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
         )}
 
         {isLimitedTimeOffer && (
-          <Chip
-            label="Limited Time Offer"
-            color="warning"
-            size="small"
-            sx={{ mt: 1 }}
-          />
+          <Chip label="Limited Time Offer" color="warning" size="small" sx={{ mt: 1 }} />
         )}
 
         {!inStock && (

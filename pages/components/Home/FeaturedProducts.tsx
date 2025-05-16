@@ -13,15 +13,15 @@ const FeaturedProducts = () => {
           xs: '100%',
           sm: '95%',
           md: '90%',
-          lg: '1400px',
+          lg: '1480px',
         },
         mt: 8
       }}
     >
-      <Typography variant="h4" fontWeight={600} gutterBottom>
+      <Typography variant="h5" fontWeight={600} gutterBottom>
         Featured Products
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={2} sx={{ padding: '12px' }}>
         {featuredProducts.map((product) => (
           <Box
             key={product.id}

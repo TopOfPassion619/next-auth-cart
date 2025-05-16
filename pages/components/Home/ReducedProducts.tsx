@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import ReducedCard from './ReducedCard';
 import { reducedProducts } from '@/utils/productData';
 
@@ -20,13 +20,15 @@ const ReducedProducts = () => {
       <Typography variant="h5" fontWeight={600} gutterBottom>
         Limited-Time Deals
       </Typography>
-      <Grid container spacing={4}>
+      <div className="flex flex-wrap -mx-2 max-w-[1400px] mx-auto p-4">
         {reducedProducts.map((product) => (
-          <Grid item xs={12} sm={6} md={3} key={product.id}>
-            <ReducedCard product={product} />
-          </Grid>
+          <div key={product.id} className="w-full sm:w-1/2 md:w-1/4 p-2 flex">
+            <div className="w-full">
+              <ReducedCard product={product} />
+            </div>
+          </div>
         ))}
-      </Grid>
+      </div>
     </Box>
   );
 };
