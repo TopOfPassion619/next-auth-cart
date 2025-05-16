@@ -10,17 +10,18 @@ const FeaturedProducts = () => {
         mx: 'auto',
         px: { xs: 2, sm: 3, md: 4 },
         maxWidth: {
-          xs: '100%', // full width on extra small screens
-          sm: '95%', // 95% on small screens
-          md: '90%', // 90% on medium screens
-          lg: '1200px', // fixed width on large screens and up
+          xs: '100%',
+          sm: '95%',
+          md: '90%',
+          lg: '1400px',
         },
+        mt: 8
       }}
     >
-      <Typography variant="h5" fontWeight={600} gutterBottom>
+      <Typography variant="h4" fontWeight={600} gutterBottom>
         Featured Products
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         {featuredProducts.map((product) => (
           <Box
             key={product.id}

@@ -1,13 +1,5 @@
 'use client';
-import {
-  Card,
-  CardContent,
-  Typography,
-  CardActions,
-  Button,
-  Box,
-  CardMedia,
-} from '@mui/material';
+import { Card, CardContent, Typography, CardActions, Button, Box, CardMedia } from '@mui/material';
 import { Products } from '@/utils/productData';
 
 interface ProductCardProps {
@@ -29,33 +21,33 @@ const ProductCard = ({ product }: ProductCardProps) => {
       }}
     >
       <Box
-  sx={{
-    position: 'relative',
-    width: '100%',
-    paddingTop: '66.66%', // 3:2 aspect ratio
-    overflow: 'hidden',
-    borderTopLeftRadius: 8,
-    borderTopRightRadius: 8,
-  }}
->
-  <CardMedia
-    component="img"
-    image={product.image}
-    alt={product.name}
-    sx={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      transition: 'transform 0.5s ease',
-      '&:hover': {
-        transform: 'scale(1.1)',
-      },
-    }}
-  />
-</Box>
+        sx={{
+          position: 'relative',
+          width: '100%',
+          paddingTop: '66.66%',
+          overflow: 'hidden',
+          borderTopLeftRadius: 8,
+          borderTopRightRadius: 8,
+        }}
+      >
+        <CardMedia
+          component="img"
+          image={product.image}
+          alt={product.name}
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transition: 'transform 0.5s ease',
+            '&:hover': {
+              transform: 'scale(1.1)',
+            },
+          }}
+        />
+      </Box>
 
       <CardContent>
         <Typography variant="h6" fontWeight="medium" gutterBottom noWrap>
