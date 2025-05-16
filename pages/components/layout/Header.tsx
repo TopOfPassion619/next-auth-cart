@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-transparent shadow-md sticky top-0 z-50">
+      <header className="bg-white/30 backdrop-blur-lg shadow-md sticky top-0 z-50">
         <div className="flex items-center justify-between px-12 py-1">
           <Link href="/">
             <Typography variant="h6" component="h6" className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent" sx={{ fontFamily: "Nunito, sans-serif" }}>

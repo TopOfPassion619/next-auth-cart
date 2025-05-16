@@ -120,7 +120,7 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
             },
           }}
         >
-          {inStock ? 'Buy Now' : 'Unavailable'}
+          {inStock ? 'Add To Cart' : 'Unavailable'}
         </Button>
       </CardActions>
     </Card>

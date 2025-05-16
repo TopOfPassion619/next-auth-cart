@@ -1,5 +1,5 @@
 'use client';
-import { Card, CardContent, Typography, CardActions, Button, Box, CardMedia } from '@mui/material';
+import { Card, CardContent, Typography, CardActions, Button, Box, CardMedia, Rating } from '@mui/material';
 import { Products } from '@/utils/productData';
 
 interface ProductCardProps {
@@ -53,6 +53,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <Typography variant="h6" fontWeight="medium" gutterBottom noWrap>
           {product.name}
         </Typography>
+        <div className='flex justify-center items-center'>
+        <Rating name="half-rating" defaultValue={2.5} precision={0.5} value={product.rate} size='medium' />
+          <Typography>{product.rate}</Typography>
+        </div>
         <Typography color="text.secondary" fontWeight={500}>
           ${product.price.toFixed(2)}
         </Typography>
