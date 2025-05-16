@@ -47,6 +47,8 @@ const ReducedCard = ({ product }: ReducedProductCardProps) => {
           image={image}
           alt={name}
           sx={{
+            width: '300px',
+            height: '100',
             objectFit: 'cover',
             transition: 'transform 0.5s ease',
             '&:hover': {
