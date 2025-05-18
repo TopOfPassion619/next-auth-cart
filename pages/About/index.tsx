@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Layout from '../components/layout/Layout';
+import { Button } from '@mui/material';
 
 const About = () => {
   return (
@@ -54,32 +55,32 @@ const About = () => {
             <h2 className="text-3xl font-semibold text-center mb-10">Why Choose BuzzyCart?</h2>
             <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-white shadow rounded-lg text-center">
-                <Image src="/assets/icons/quality.png" alt="Quality" width={64} height={64} className="mx-auto mb-4" />
+                <Image src="/assets/img/furnitures/furniture3.png" alt="Quality" width={164} height={104} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
                 <p className="text-gray-600">Carefully selected materials and craftsmanship that stand the test of time.</p>
             </div>
             <div className="p-6 bg-white shadow rounded-lg text-center">
-                <Image src="/assets/icons/modern-design.png" alt="Design" width={64} height={64} className="mx-auto mb-4" />
+                <Image src="/assets/img/furnitures/furniture4.png" alt="Design" width={164} height={104} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Modern Designs</h3>
                 <p className="text-gray-600">A blend of style and functionality that elevates your living spaces.</p>
             </div>
             <div className="p-6 bg-white shadow rounded-lg text-center">
-                <Image src="/assets/icons/customer-care.png" alt="Support" width={64} height={64} className="mx-auto mb-4" />
+                <Image src="/assets/img/furnitures/furniture2.png" alt="Support" width={164} height={104} className="mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Dedicated Support</h3>
                 <p className="text-gray-600">We’re here for you — before, during, and after your purchase.</p>
             </div>
             </div>
         </div>
 
-        <div className="bg-primary text-white py-12">
+        <div className="bg-primary text-gray-500 py-12">
             <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
             <p className="text-lg mb-6">
                 Discover furniture that fits your style and makes your home come alive. Start your journey with BuzzyCart today.
             </p>
-            <a href="/products" className="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+            <Button variant='outlined' size='medium' color='primary'>
                 Shop Now
-            </a>
+            </Button>
             </div>
         </div>
         </section>
